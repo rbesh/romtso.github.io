@@ -1,0 +1,122 @@
+.container{
+  width:100%;
+  margin:0px;
+}
+#title{
+  font-size: 30px;
+  text-align: center;
+}
+.chip{
+  margin: 2px;
+  color:white;
+  font-weight: 100;
+}
+#bigCard{
+  margin:20px;
+  width:300px;
+  position: fixed;
+}
+#littlePokemonPic{
+  padding: 20px;
+  padding-bottom: 0px;
+}
+#leftCol{
+  width: 135px;
+}
+.card .card-content{
+  padding: 5px
+}
+.preloader-wrapper{
+  position: absolute;
+  top: 50%;
+  left:50%;
+}
+h5{
+  margin:0px;
+  font-size: 1.4em;
+}
+.card .card-action{
+  padding:5px;
+}
+.table{
+  margin-bottom: 0px;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.badge{
+  width:100%;
+  height: 30px;
+  border-radius: 10px;
+  text-align: center;
+  vertical-align: center;
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-top: 6px;
+}
+.abilityRow{
+  margin-bottom: 0px;
+}
+
+.Normal{
+  background-color:#009688;
+}
+.Fighting{
+  background-color: #F44336;
+}
+.Flying{
+  background-color: #B2EBF2;
+}
+.Poison{
+  background-color: #E040FB;
+}
+.Ground{
+  background-color: #5D4037;
+}
+.Rock{
+  background-color: #616161;
+}
+.Bug{
+  background-color: #795548;
+}
+.Ghost{
+  background-color: #d1e8f0;
+}
+.Steel{
+  background-color: #9E9E9E;
+}
+.Fire{
+  background-color: #FF5722;
+}
+.Water{
+  background-color: #1976D2;
+}
+.Grass{
+  background-color: #4CAF50;
+}
+.Electric{
+  background-color: #FFEB3B;
+}
+.Ice{
+  background-color: #448AFF;
+}
+.Dragon{
+  background-color: #E64A19;
+}
+.Dark{
+  background-color: #212121;
+}
+.Fairy{
+  background-color: #F8BBD0;
+}
+.Unknown{
+  background-color: #F2E441;
+}
+.Shadow{
+  background-color: #616161;
+}
+.Psychic{
+  background-color: #727272;
+}
