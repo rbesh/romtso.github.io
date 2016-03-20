@@ -11,7 +11,7 @@ app.use('/public/bundle.js', function(req,res){
   res.sendFile(path.resolve('public/bundle.js'))
 });
 
-app.get('/', function (req, res) {
+app.get('/pokedex', function (req, res) {
   res.sendFile(path.resolve('index.html'));
 });
 

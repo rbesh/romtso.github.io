@@ -65,7 +65,7 @@
 	(0, _reactDom.render)(_react2.default.createElement(
 	  _reactRouter.Router,
 	  { history: _reactRouter.browserHistory },
-	  _react2.default.createElement(_reactRouter.Route, { path: '/', component: _Container2.default })
+	  _react2.default.createElement(_reactRouter.Route, { path: 'pokedex', component: _Container2.default })
 	), document.getElementById('root'));
 
 /***/ },
