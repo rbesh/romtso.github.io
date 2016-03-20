@@ -7,6 +7,6 @@ browserHistory.push('/pokedex')
 
 render((
   <Router history={browserHistory}>
-    <Route path="/" component={Container} />
+    <Route path="/pokedex" component={Container} />
   </Router>
 ), document.getElementById('root'))
