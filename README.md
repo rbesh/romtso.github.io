@@ -6,6 +6,7 @@ $ npm install
 Then use npm start for run the application
 ```sh
 $ npm start
+$ browser http://localhost:3000
 ```
 ##Available on github pages!
 You can open live demo here
