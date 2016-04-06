@@ -4,14 +4,11 @@ import store from '../store.js'
 
 export let getPokemons = () => {
   let url = store.getState().nextGetUrl
-  fetch(url)
+  return fetch(url)
   .then(res=>res.json())
   .then(res=>{
     store.dispatch({type:SAVE_POKEMONS, data:res.objects})
     store.dispatch({type:LOADED})
-    return res
-  })
-  .then(res=>{
     store.dispatch({type:SAVE_NEXT_URL, data:res.meta.next})
   })
 }

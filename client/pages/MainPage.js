@@ -10,12 +10,14 @@ import {getPokemons} from '../actions'
 export default class MainPage extends React.Component {
   constructor(...options){
     super(...options)
-    this.state = {pokemons:[],currentPokemon:{types:[],moves:[]},detailIsVisible:false}
+    this.state = {pokemons:[],currentPokemon:{types:[],moves:[]},detailIsVisible:false,loadMoreButton:'LOAD MORE'}
     store.subscribe(()=>{this.setState({pokemons:store.getState().pokemons})})
   }
   handleLoadMore(e){
     e.preventDefault()
+    this.setState({loadMoreButton:'LOADING...'})
     getPokemons()
+    .then(()=>{this.setState({loadMoreButton:'LOAD MORE'})})
   }
   setCurrentPokemon(e,pokemon){
     e.preventDefault()
@@ -55,7 +57,12 @@ export default class MainPage extends React.Component {
             {this.filteredPokemons().map((elem,i)=>{
               return <Col key={i} xs={6} md={4}><Card onClick={(e)=>{this.setCurrentPokemon(e,elem)}} pokemon={elem} /></Col>
             })}
-            <Button onClick={(e)=>{this.handleLoadMore(e)}}bsSize="large" block>Load More</Button>
+            {!store.getState().applyedFilters.length
+            ? <Button onClick={(e)=>{this.handleLoadMore(e)}} bsSize="large" block>{this.state.loadMoreButton}</Button>
+            : ''}
+            {store.getState().applyedFilters.length && !this.filteredPokemons().length
+            ? <h4>Missing pokemon with choosen ability :(</h4>
+            : ''}
           </Col>
           <Col xs={5} md={4}>
             {this.state.detailIsVisible
